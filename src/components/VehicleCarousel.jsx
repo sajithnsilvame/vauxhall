@@ -55,9 +55,9 @@ const VehicleCarousel = () => {
         <h2 className="text-3xl font-extrabold text-gray-900 text-center">
           Discover The Vauxhall Range of Vehicles
         </h2>
-        <Slider {...settings} className="mt-6">
+        <Slider {...settings} className="mt-5 ml-10 mr-10">
           {vehicles.map((vehicle, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="flex flex-col items-center ">
               <img
                 className="h-40 w-60 object-contain"
                 src={vehicle.image}
@@ -81,7 +81,7 @@ const VehicleCarousel = () => {
 
 const SampleNextArrow = ({ className, style, onClick }) => {
   return (
-    <div className={className} style={{ ...style }} onClick={onClick}>
+    <div className={`${className}`} style={{ ...style }} onClick={onClick}>
       <svg
         className="h-6 w-6 text-black"
         fill="none"
@@ -107,7 +107,11 @@ SampleNextArrow.propTypes = {
 
 const SamplePrevArrow = ({ className, style, onClick }) => {
   return (
-    <div className={className} style={{ ...style }} onClick={onClick}>
+    <div
+      className={`${className}`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
       <svg
         className="h-6 w-6 text-black"
         fill="none"
